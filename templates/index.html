@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+<style>
+    * {
+        background-color: black;
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 60pt;
+        margin-top: 100px;
+    }
+    .maincontainer {
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .squares {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 50px;
+    }
+    #square {
+        border: 3px solid white;
+        width: 200px;
+        height: 200px;
+        background-color: goldenrod
+    }
+    span {
+        color: goldenrod;
+    }
+</style>
+</head>
+<body>
+    <h1> Neat squares<span style = "color: {{ color }}">,</span> man<span style = "color: {{ color }}">.</span> </h1>
+    <div class = maincontainer>
+        {% for i in range(number)%}
+        <div class = squares>
+            <div id = square style = "background-color: {{ color }}"></div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
